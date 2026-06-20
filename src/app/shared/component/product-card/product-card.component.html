@@ -1,0 +1,16 @@
+<mat-card class="product-card">
+  <div class="image-wrapper">
+    <img [src]="product().image" [alt]="product().name" class="product-image" />
+    <span class="category-badge">{{ product().category }}</span>
+  </div>
+
+  <mat-card-content>
+    <h3 class="product-name">{{ product().name }}</h3>
+    <p class="product-description">{{ product().description }}</p>
+    <p class="product-price">{{ product().price | currency }}</p>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button mat-raised-button color="primary" (click)="onAddToCart()">Add to Cart</button>
+  </mat-card-actions>
+</mat-card>
