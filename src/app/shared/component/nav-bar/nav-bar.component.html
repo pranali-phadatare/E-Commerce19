@@ -1,0 +1,30 @@
+<mat-toolbar color="primary" class="nav-toolbar">
+  <a routerLink="/product" class="brand">
+    <mat-icon>storefront</mat-icon>
+    <span class="brand-name">ShopEase</span>
+  </a>
+
+  <span class="spacer"></span>
+
+  <nav class="nav-links">
+    <a mat-button routerLink="/product" routerLinkActive="active-link" class="nav-link">
+      <mat-icon>inventory_2</mat-icon>
+      <span class="nav-link-text">Product</span>
+    </a>
+    <a mat-button routerLink="/cart" routerLinkActive="active-link" class="nav-link">
+      <mat-icon
+        [matBadge]="cartItemCount()"
+        [matBadgeHidden]="cartItemCount() === 0"
+        matBadgeSize="small"
+        matBadgeColor="accent"
+        aria-hidden="false"
+        >shopping_cart</mat-icon
+      >
+      <span class="nav-link-text">Cart</span>
+    </a>
+    <a mat-button routerLink="/contactus" routerLinkActive="active-link" class="nav-link">
+      <mat-icon>mail</mat-icon>
+      <span class="nav-link-text">Contact Us</span>
+    </a>
+  </nav>
+</mat-toolbar>

@@ -1,0 +1,146 @@
+[
+  {
+    "id": 1,
+    "name": "Wireless Bluetooth Headphones",
+    "price": 79.99,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4BEts5j-X3yT0Bqw9zuKS9PtVxJIB2vZEWWj2kdngUQ&s=10",
+    "category": "Electronics",
+    "description": "Over-ear wireless headphones with active noise cancellation, 30-hour battery life and plush memory-foam ear cushions for all-day comfort."
+  },
+  {
+    "id": 2,
+    "name": "Smart Fitness Watch",
+    "price": 129.99,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRad2On_5I_o8B5lA4o5kTKTsnEcJcK4TxtTzRZ_U8c5Q&s=10",
+    "category": "Electronics",
+    "description": "Track heart rate, sleep and workouts with this water-resistant smart watch featuring a vibrant AMOLED display and 7-day battery life."
+  },
+  {
+    "id": 3,
+    "name": "Portable Bluetooth Speaker",
+    "price": 49.99,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTo4MAFv14aYIuGjYAEpdbSu17ri84zmlHQWRYb17Cc0w&s=10",
+    "category": "Electronics",
+    "description": "Compact, rugged speaker with 360-degree sound, IPX7 waterproofing and 12 hours of playtime for music on the go."
+  },
+  {
+    "id": 4,
+    "name": "4K Action Camera",
+    "price": 199.99,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8C71qJh_kbfIGxJPuQ1h5md1E3Rtmm6f1uS-A6gX7JA&s=10",
+    "category": "Electronics",
+    "description": "Capture stunning 4K footage with image stabilization, waterproof housing and Wi-Fi transfer for adventure-ready vlogging."
+  },
+  {
+    "id": 5,
+    "name": "Men's Leather Jacket",
+    "price": 159.99,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhgOHQjPcA7p6jdm1DTgcwdfROOwbAiJZIm_DNgbVgzg&s=10",
+    "category": "Fashion",
+    "description": "Genuine leather jacket with a tailored fit, quilted lining and classic biker-style silhouette for year-round wear."
+  },
+  {
+    "id": 6,
+    "name": "Women's Running Shoes",
+    "price": 89.99,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfRfbp-aW-tmsoWRpnvseMoJNxHJ7QLcGU1lLHqUpIcQ&s=10",
+    "category": "Fashion",
+    "description": "Lightweight running shoes with responsive cushioning, breathable mesh upper and durable rubber outsole for daily training."
+  },
+  {
+    "id": 7,
+    "name": "Classic Denim Jacket",
+    "price": 69.99,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCPnxWkwaAhzYaofISS5DnaXowPHQ2jHOLRhusfVuRmQ&s=10",
+    "category": "Fashion",
+    "description": "A timeless denim jacket crafted from premium cotton with a relaxed fit, perfect for layering in any season."
+  },
+  {
+    "id": 8,
+    "name": "Stainless Steel Cookware Set",
+    "price": 149.99,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvKJGkFjv2UzmX5X52n7uWVC-YkZNYkcVurMTtPc9LPw&s=10",
+    "category": "Home & Kitchen",
+    "description": "10-piece tri-ply stainless steel cookware set with heat-resistant handles, even heat distribution and dishwasher-safe finish."
+  },
+  {
+    "id": 9,
+    "name": "Automatic Espresso Machine",
+    "price": 249.99,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8fet2LyU55DpGltrLw9pvu-LZ19C88fvBOuWxszAr2g&s=10",
+    "category": "Home & Kitchen",
+    "description": "Brew café-quality espresso at home with this automatic machine featuring a built-in grinder and milk frother."
+  },
+  {
+    "id": 10,
+    "name": "Memory Foam Pillow",
+    "price": 39.99,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlQav9yKLwZLuYqAdVJEqmv6_1kSxo3E_8H7YKnYSwew&s=10",
+    "category": "Home & Kitchen",
+    "description": "Ergonomic memory foam pillow that contours to your neck and shoulders for pressure-free, restorative sleep."
+  },
+  {
+    "id": 11,
+    "name": "Yoga Mat with Carry Strap",
+    "price": 29.99,
+    "image": "data:image/avif;base64,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",
+    "category": "Sports & Outdoors",
+    "description": "Extra-thick, non-slip yoga mat made from eco-friendly TPE material, complete with a carry strap for easy transport."
+  },
+  {
+    "id": 12,
+    "name": "Adjustable Dumbbell Set",
+    "price": 119.99,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSv5ow46HTn8FyCWM22azLAMI4TLBs4uf7bQ2tvjUKSzg&s=10",
+    "category": "Sports & Outdoors",
+    "description": "Space-saving adjustable dumbbells ranging from 5 to 25 lbs per hand, ideal for strength training at home."
+  },
+  {
+    "id": 13,
+    "name": "Camping Tent for 4 Person",
+    "price": 179.99,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyidx205X86aP2eOhEFsvbxZIF9Rvy_MJZYoOLx1Jhuw&s=10",
+    "category": "Sports & Outdoors",
+    "description": "Weatherproof 4-person tent with quick-pitch setup, double-layer rainfly and mesh windows for ventilation."
+  },
+  {
+    "id": 14,
+    "name": "The Art of Programming",
+    "price": 34.99,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTm3N_bTzDt8vx7VsL_9awxbAFA9KcjPDsQWHlKUncT2A&s=10",
+    "category": "Books",
+    "description": "A comprehensive guide to writing clean, maintainable code, covering algorithms, design patterns and best practices."
+  },
+  {
+    "id": 15,
+    "name": "Mindfulness & Meditation Guide",
+    "price": 19.99,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBeGNvAhJV6VGPD3QLKOzMU4z33sjW5jUHx5WcGOpjxg&s=10",
+    "category": "Books",
+    "description": "A practical handbook of mindfulness exercises and guided meditations to help reduce stress and improve focus."
+  },
+  {
+    "id": 16,
+    "name": "Organic Face Serum",
+    "price": 24.99,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkHVJdkDNG-ujOFyU4UvULjDSH-JT-1NUS4jf6fuTeTw&s=10",
+    "category": "Beauty",
+    "description": "Lightweight, fast-absorbing facial serum infused with vitamin C and hyaluronic acid for a radiant, hydrated glow."
+  },
+  {
+    "id": 17,
+    "name": "Luxury Perfume Set",
+    "price": 89.99,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRakUJlITlTFnUZzmdKaPBrwyXlj6UN15HuhTLHnrLNzY_JT-2i3p9iIUE&s=10",
+    "category": "Beauty",
+    "description": "A curated set of three signature fragrances with floral, woody and citrus notes, presented in an elegant gift box."
+  },
+  {
+    "id": 18,
+    "name": "Electric Toothbrush",
+    "price": 44.99,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKDp6NJDtAcMJed7RBcsRpPatXgRu3oiOLMIf10SHD4a0TgHTLvqFpalzp&s=10",
+    "category": "Beauty",
+    "description": "Rechargeable electric toothbrush with three cleaning modes, a built-in timer and a 2-week battery life."
+  }
+]
