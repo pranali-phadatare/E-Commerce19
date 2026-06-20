@@ -13,14 +13,14 @@ import { MatButtonModule } from '@angular/material/button';
   interface ContactFormValue {
     name: string;
     email: string;
-    number: number;
+    number: string;
     message: string;
   }
 
   type ContactForm = FormGroup<{
     name: FormControl<string>;
     email: FormControl<string>;
-    number: FormControl<number>;
+    number: FormControl<string>;
     message: FormControl<string>;
   }>;
 
@@ -36,7 +36,7 @@ export class ContactusComponent {
     readonly contactForm: ContactForm = this.fb.nonNullable.group({
       name: ['', [Validators.required, Validators.minLength(2)]],
       email: ['', [Validators.required, Validators.email]],
-      number: [0, [Validators.required, Validators.maxLength(10)]],
+      number: ['', [Validators.required, Validators.pattern(/^[6-9]\d{9}$/)]],
       message: ['', [Validators.required, Validators.minLength(10)]]
     });
 
