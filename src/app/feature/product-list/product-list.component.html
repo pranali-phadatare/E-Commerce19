@@ -21,6 +21,12 @@
     </mat-form-field>
   </div>
 
+  @if (loading) {
+    <div class="loading-spinner">
+      <h2>loading...</h2>
+    </div>
+  } 
+
   <div class="product-grid">
     @for (product of filteredProducts(); track product.id) {
       <app-product-card [product]="product" (addToCart)="onAddToCart($event)" />

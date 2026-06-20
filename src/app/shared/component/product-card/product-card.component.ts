@@ -1,8 +1,9 @@
-import { Component, input, output } from '@angular/core';
+import { Component, input, output, inject } from '@angular/core';
 import { CurrencyPipe } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { Product } from '../../../core/models/product.model';
+import { ToastService } from '../../../core/services/toast.service';
 
 @Component({
   selector: 'app-product-card',
@@ -11,13 +12,12 @@ import { Product } from '../../../core/models/product.model';
   styleUrl: './product-card.component.scss'
 })
 export class ProductCardComponent {
-  // Signal input: the product this card renders
   readonly product = input.required<Product>();
-
-  // Signal output: emits the product when "Add to Cart" is clicked
   readonly addToCart = output<Product>();
+  private readonly toastService = inject(ToastService);
 
   onAddToCart(): void {
     this.addToCart.emit(this.product());
+    this.toastService.success(`${this.product().name} added to cart`);
   }
 }
