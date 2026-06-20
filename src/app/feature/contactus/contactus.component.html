@@ -1,0 +1,45 @@
+<div class="contact-page">
+  <h2>Contact Us</h2>
+
+  @if (submitted()) {
+    <p class="success-message">Thanks for reaching out! We'll get back to you soon.</p>
+  }
+
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
+    <mat-form-field appearance="outline">
+      <mat-label>Name</mat-label>
+      <input matInput formControlName="name" />
+      @if (contactForm.controls.name.invalid && contactForm.controls.name.touched) {
+        <mat-error>Name must be at least 2 characters.</mat-error>
+      }
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+      <input matInput type="email" formControlName="email" />
+      @if (contactForm.controls.email.invalid && contactForm.controls.email.touched) {
+        <mat-error>Enter a valid email address.</mat-error>
+      }
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Phone Number</mat-label>
+      <input matInput type="Number" formControlName="number" />
+      @if (contactForm.controls.number.invalid && contactForm.controls.number.touched) {
+        <mat-error>Enter a valid phone number.</mat-error>
+      }
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Message</mat-label>
+      <textarea matInput rows="4" formControlName="message"></textarea>
+      @if (contactForm.controls.message.invalid && contactForm.controls.message.touched) {
+        <mat-error>Message must be at least 10 characters.</mat-error>
+      }
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit" [disabled]="contactForm.invalid">
+      Send
+    </button>
+  </form>
+</div>

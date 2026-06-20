@@ -19,6 +19,7 @@ interface ContactFormValue {
 type ContactForm = FormGroup<{
   name: FormControl<string>;
   email: FormControl<string>;
+  number:FormControl<number>;
   message: FormControl<string>;
 }>;
 
@@ -34,6 +35,7 @@ export class ContactusComponent {
   readonly contactForm: ContactForm = this.fb.nonNullable.group({
     name: ['', [Validators.required, Validators.minLength(2)]],
     email: ['', [Validators.required, Validators.email]],
+    number: [0,[Validators.required, Validators.maxLength(10)]],
     message: ['', [Validators.required, Validators.minLength(10)]]
   });
 
