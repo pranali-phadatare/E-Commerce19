@@ -1,4 +1,11 @@
 .nav-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  background-color: #1e293b !important; // tumcha color
+  color: white;
+
   display: flex;
   align-items: center;
 }
@@ -7,13 +14,14 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  color: inherit;
+  color: #ffffff;
   text-decoration: none;
 }
 
 .brand-name {
   font-size: 1.25rem;
   font-weight: 500;
+  color: #ffffff;
 }
 
 .spacer {
@@ -23,12 +31,17 @@
 .nav-links {
   display: flex;
   gap: 4px;
+  color:#ffffff;
 }
 
 .nav-link {
   display: flex;
   align-items: center;
   gap: 4px;
+  color: #ffffff !important;
+}
+.nav-link mat-icon {
+  color: #ffffff !important;
 }
 
 .active-link {

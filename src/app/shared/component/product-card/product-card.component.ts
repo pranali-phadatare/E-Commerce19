@@ -1,14 +1,16 @@
 import { Component, input, output, inject } from '@angular/core';
-import { CurrencyPipe } from '@angular/common';
+import { CurrencyPipe, CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatIconModule } from '@angular/material/icon';
 import { Product } from '../../../core/models/product.model';
 import { ToastService } from '../../../core/services/toast.service';
 
 @Component({
   selector: 'app-product-card',
   standalone: true,
-  imports: [CurrencyPipe, MatCardModule, MatButtonModule],
+  imports: [CurrencyPipe, CommonModule, MatCardModule, MatButtonModule, MatChipsModule, MatIconModule],
   templateUrl: './product-card.component.html',
   styleUrl: './product-card.component.scss'
 })

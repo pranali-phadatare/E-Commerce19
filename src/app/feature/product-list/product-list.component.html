@@ -29,7 +29,7 @@
   </div>
 }
 @else {
- <div class="product-grid">
+ <div class="product-grid" >
     @for (product of filteredProducts(); track product.id) {
       <app-product-card [product]="product" (addToCart)="onAddToCart($event)" />
     } @empty {

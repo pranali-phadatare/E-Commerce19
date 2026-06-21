@@ -1,5 +1,7 @@
 .product-list-page {
-  padding: 16px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1.5rem;
 }
 
 .page-header {
@@ -34,7 +36,8 @@
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 16px;
+  gap: 1.25rem;
+  padding: 0 26px;
 }
 .loading-container {
   display: flex;

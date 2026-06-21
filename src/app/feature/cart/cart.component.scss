@@ -47,6 +47,11 @@
   max-width: 900px;
   margin: 0 auto;
   margin-bottom: 0.75rem;
+
+   &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+  }
 }
 
 .cart-item-image {

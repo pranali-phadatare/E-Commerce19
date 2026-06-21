@@ -8,6 +8,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { CartService } from '../../core/services/cart.service';
 import { CartItem } from '../../core/models/cart-item.model'
 import { MatTabsModule } from '@angular/material/tabs';
+import { ToastService } from '../../core/services/toast.service';
 
 @Component({
   selector: 'app-cart',
@@ -17,6 +18,7 @@ import { MatTabsModule } from '@angular/material/tabs';
   styleUrl: './cart.component.scss'
 })
 export class CartComponent {
+  private readonly toastService = inject(ToastService);
   private readonly cartService = inject(CartService);
   private readonly snackBar = inject(MatSnackBar);
 
@@ -47,6 +49,7 @@ export class CartComponent {
   remove(productId: number, productName: string): void {
     this.cartService.removeFromCart(productId);
     this.snackBar.open(`Removed ${productName} from cart`, 'Dismiss', { duration: 3000 });
+    this.toastService.success(`Removed  ${productName}from cart`);
   }
 
   clearCart(): void {
