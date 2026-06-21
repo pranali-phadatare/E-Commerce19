@@ -1,0 +1,51 @@
+@if (items().length === 0) {
+  <div class="empty-cart">
+    <mat-icon aria-hidden="true">shopping_cart</mat-icon>
+    <p>Your cart is empty.</p>
+    <button mat-raised-button color="primary" routerLink="/product">Browse Products</button>
+  </div>
+} @else {
+  <div class="cart-items">
+    @for (item of items(); track item.product.id) {
+      <div class="cart-item">
+        <img [src]="item.product.image" [alt]="item.product.name" class="cart-item-image" />
+
+        <div class="cart-item-info">
+          <h4>{{ item.product.name }}</h4>
+          <p class="unit-price">{{ item.product.price | currency: 'USD' }} each</p>
+        </div>
+
+        <div class="quantity-controls">
+          <button mat-icon-button (click)="decrease(item.product.id)" aria-label="Decrease quantity">
+            <mat-icon aria-hidden="true">remove</mat-icon>
+          </button>
+          <span class="quantity">{{ item.quantity }}</span>
+          <button mat-icon-button (click)="increase(item.product.id)" aria-label="Increase quantity">
+            <mat-icon aria-hidden="true">add</mat-icon>
+          </button>
+        </div>
+
+        <p class="item-total">{{ item.product.price * item.quantity | currency: 'USD' }}</p>
+
+        <button
+          mat-icon-button
+          color="warn"
+          class="remove-btn"
+          (click)="remove(item.product.id, item.product.name)"
+          aria-label="Remove item"
+        >
+          <mat-icon aria-hidden="true">delete</mat-icon>
+        </button>
+      </div>
+      <mat-divider />
+    }
+  </div>
+
+  <div class="cart-summary">
+    <button mat-stroked-button color="warn" (click)="clearCart()">Clear Cart</button>
+    <div class="grand-total">
+      <span>Grand Total</span>
+      <strong>{{ grandTotal() | currency: 'USD' }}</strong>
+    </div>
+  </div>
+}
