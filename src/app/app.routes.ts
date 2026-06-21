@@ -10,18 +10,22 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./feature/product-list/product-list.component').then(m => m.ProductListComponent)
   },
+  {
+      path: 'cart',
+      component: CartContactComponent,
+      children: [
+        {
+          path: '',
+          loadComponent: () => import('./feature/cart/cart.component').then(m => m.CartComponent)
+        },
+        {
+          path: 'contact-us',
+          loadComponent: () => import('./feature/contactus/contactus.component').then(m => m.ContactusComponent)
+        }
+      ]
+  },
  {
-    path: 'cart',
-    component: CartContactComponent,
-    children: [
-      {
-        path: '',
-        loadComponent: () => import('./feature/cart/cart.component').then(m => m.CartComponent)
-      },
-      {
-        path: 'contact-us',
-        loadComponent: () => import('./feature/contactus/contactus.component').then(m => m.ContactusComponent)
-      }
-    ]
-}
+    path: '**',
+    loadComponent: () => import('./shared/component/not-found/not-found.component').then((m) => m.NotFoundComponent)
+  }
 ];
