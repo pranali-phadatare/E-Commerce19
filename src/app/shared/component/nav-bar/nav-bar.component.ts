@@ -8,6 +8,7 @@ import { CartService } from '../../../core/services/cart.service';
 
 @Component({
   selector: 'app-nav-bar',
+  standalone: true,
   imports: [
     RouterLink,
     RouterLinkActive,

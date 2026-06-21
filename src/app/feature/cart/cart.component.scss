@@ -16,16 +16,37 @@
   }
 }
 
+.cart-contact-page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.tabs {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  padding: 0 1.25rem 1.5rem;
+}
+
+
 .cart-items {
   padding-top: 1rem;
 }
 
 .cart-item {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 1rem;
+  background: #fff;
   display: grid;
   grid-template-columns: 64px 1fr auto auto auto;
   align-items: center;
   gap: 1rem;
-  padding: 0.75rem 0;
+  padding:10px;
+  max-width: 900px;
+  margin: 0 auto;
+  margin-bottom: 0.75rem;
 }
 
 .cart-item-image {
@@ -68,14 +89,20 @@
 }
 
 .cart-summary {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 1rem;
+  background: #fff;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+  max-width: 900px;
+  margin: 0 auto;
   flex-wrap: wrap;
   margin-top: 1.5rem;
   padding-top: 1.5rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  // border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .grand-total {
@@ -120,4 +147,14 @@
     grid-area: remove;
     justify-self: start;
   }
+}
+.contact-tab{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.75rem;
+  padding: 3rem 1rem;
+
 }

@@ -9,6 +9,8 @@ import {
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { Router, RouterLink } from '@angular/router';
+import { ToastService } from '../../core/services/toast.service';
 
   interface ContactFormValue {
     name: string;
@@ -26,11 +28,14 @@ import { MatButtonModule } from '@angular/material/button';
 
 @Component({ 
   selector: 'app-contactus', 
+  standalone: true,
   imports: [ReactiveFormsModule, MatFormFieldModule, MatInputModule, MatButtonModule], 
   templateUrl: './contactus.component.html', 
   styleUrl: './contactus.component.scss' 
 }) 
 export class ContactusComponent { 
+    private readonly router = inject(Router);
+    private readonly toastService = inject(ToastService);
     private readonly fb = inject(FormBuilder);
 
     readonly contactForm: ContactForm = this.fb.nonNullable.group({
@@ -50,8 +55,10 @@ export class ContactusComponent {
 
       const formValue: ContactFormValue = this.contactForm.getRawValue();
       console.log('Contact form submitted:', formValue);
-
+      this.toastService.success('Message sent! We will get back to you soon.');
+      this.router.navigate(['/product']);
       this.submitted.set(true);
       this.contactForm.reset();
+
     }
 } 

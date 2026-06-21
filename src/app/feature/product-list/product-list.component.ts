@@ -12,6 +12,7 @@ import { ToastService } from '../../core/services/toast.service';
 
 @Component({
   selector: 'app-product-list',
+  standalone: true,
   imports: [
     ProductCardComponent,
     MatFormFieldModule,

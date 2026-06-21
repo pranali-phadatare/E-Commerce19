@@ -7,6 +7,7 @@ import { ToastService } from '../../../core/services/toast.service';
 
 @Component({
   selector: 'app-product-card',
+  standalone: true,
   imports: [CurrencyPipe, MatCardModule, MatButtonModule],
   templateUrl: './product-card.component.html',
   styleUrl: './product-card.component.scss'
