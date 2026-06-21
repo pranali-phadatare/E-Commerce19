@@ -6,14 +6,13 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { CartService } from '../../core/services/cart.service';
-import { CartItem } from '../../core/models/cart-item.model';
-import { ContactusComponent } from '../contactus/contactus.component';
+import { CartItem } from '../../core/models/cart-item.model'
 import { MatTabsModule } from '@angular/material/tabs';
 
 @Component({
   selector: 'app-cart',
   standalone: true,
-  imports: [CurrencyPipe, RouterLink, MatButtonModule, MatIconModule, MatDividerModule, ContactusComponent,MatTabsModule],
+  imports: [CurrencyPipe, RouterLink, MatButtonModule, MatIconModule, MatDividerModule,MatTabsModule],
   templateUrl: './cart.component.html',
   styleUrl: './cart.component.scss'
 })

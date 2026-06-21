@@ -1,0 +1,11 @@
+<mat-tab-group
+  [selectedIndex]="selectedTab"
+  (selectedTabChange)="onTabChange($event)"
+>
+  <mat-tab label="Cart"></mat-tab>
+  <mat-tab label="Contact Us"></mat-tab>
+</mat-tab-group>
+
+<div class="tab-content">
+  <router-outlet></router-outlet>
+</div>

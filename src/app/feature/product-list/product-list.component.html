@@ -1,3 +1,4 @@
+
 <div class="product-list-page">
   <header class="page-header">
     <h1>Our Products</h1>
@@ -20,18 +21,19 @@
       </mat-select>
     </mat-form-field>
   </div>
-
-  @if (loading) {
-    <div class="loading-spinner">
-      <h2>loading...</h2>
-    </div>
-  } 
-
-  <div class="product-grid">
+</div>
+@if (loading) {
+  <div class="loading-container">
+    <mat-spinner diameter="50"></mat-spinner>
+    <p>Loading products...</p>
+  </div>
+}
+@else {
+ <div class="product-grid">
     @for (product of filteredProducts(); track product.id) {
       <app-product-card [product]="product" (addToCart)="onAddToCart($event)" />
     } @empty {
       <p>No products found.</p>
     }
   </div>
-</div>
+}

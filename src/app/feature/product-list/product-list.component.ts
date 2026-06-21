@@ -9,6 +9,7 @@ import { ProductService } from '../../core/services/product.service';
 import { CartService } from '../../core/services/cart.service';
 import { Product } from '../../core/models/product.model';
 import { ToastService } from '../../core/services/toast.service';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @Component({
   selector: 'app-product-list',
@@ -18,22 +19,31 @@ import { ToastService } from '../../core/services/toast.service';
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
-    MatIconModule
+    MatIconModule,
+    MatProgressSpinnerModule
   ],
   templateUrl: './product-list.component.html',
   styleUrl: './product-list.component.scss'
 })
 export class ProductListComponent {
-  loading:boolean = false;
   private readonly productService = inject(ProductService);
   private readonly cartService = inject(CartService);
   private readonly toastService = inject(ToastService);
 
-  readonly products: Signal<Product[]> = toSignal(this.productService.getProducts(), {
+  products = signal<Product[]>([]);
+  loading = true;
 
-    initialValue: []
-  });
-
+  ngOnInit(): void {
+    this.productService.getProducts().subscribe({
+      next: (products) => {
+        this.products.set(products);
+        this.loading = false;
+      },
+      error: () => {
+        this.loading = false;
+      }
+    });
+  }
   readonly searchTerm = signal('');
   readonly selectedCategory = signal('');
 
