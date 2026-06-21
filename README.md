@@ -2,58 +2,48 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.27.
 
-## Development server
 
-To start a local development server, run:
+## Features
+
+- Product listing with image, name, price, category and Add to Cart button
+- Skeleton loaders while products are loading
+- Friendly empty state when no products match the filters
+- Debounced live search by product name (custom `appDebounceInput` directive)
+- Dynamic category dropdown filter, generated from the loaded product list
+- Search term & category filter persisted in `localStorage` across refresh/navigation
+- Responsive product grid with hover effects on cards
+- Cart state managed with Angular Signals: `addToCart`, `removeFromCart`, `increaseQuantity`, `decreaseQuantity`, `clearCart`
+- Cart persisted to `localStorage` and automatically restored on refresh
+- Computed signals for cart item count and grand total
+- Tabbed Cart / Contact Us page using Angular Material Tabs
+- Reactive contact form with real-time validation messages (required, email format, 10-digit phone, 20-char minimum message)
+- Submit button disabled while the form is invalid; success banner + toast + form reset on successful submit
+- Toast notifications (Angular Material Snack Bar) for add/remove cart actions and form submission
+- Cart item count badge in the navbar
+- Lazy-loaded `/products` and `/cart-contact` feature routes, plus a 404 Not Found page
+- Fully responsive layout (mobile, tablet, desktop)
+
+
+## Installation Steps
+
+**Prerequisites:** Node.js 18.19+ (or 20+) and npm.
 
 ```bash
+# 1. Install dependencies
+npm install
+```
+
+No environment variables or backend setup are required — product data is served from a static JSON file (`public/data/products.json`).
+
+## Run Commands
+
+```bash
+# Start the dev server (http://localhost:4200)
+npm start
+# or
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+The app redirects `/` to `/product` automatically.
 
-## Code scaffolding
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
