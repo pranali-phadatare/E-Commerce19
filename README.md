@@ -20,7 +20,7 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 - Submit button disabled while the form is invalid; success banner + toast + form reset on successful submit
 - Toast notifications (Angular Material Snack Bar) for add/remove cart actions and form submission
 - Cart item count badge in the navbar
-- Lazy-loaded `/products` and `/cart-contact` feature routes, plus a 404 Not Found page
+- Lazy-loaded `/product` and `/cart` feature routes, plus a 404 Not Found page
 - Fully responsive layout (mobile, tablet, desktop)
 
 
@@ -33,7 +33,7 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 npm install
 ```
 
-No environment variables or backend setup are required — product data is served from a static JSON file (`public/data/products.json`).
+No environment variables or backend setup are required — product data is served from a static JSON file (`public/data/product.json`).
 
 ## Run Commands
 
@@ -45,5 +45,20 @@ ng serve
 ```
 
 The app redirects `/` to `/product` automatically.
+
+## Recommended Git Commit History
+
+The project was structured to map cleanly onto the following incremental commit history:
+
+1. `initial commit`
+2. `Create project architecture and add ecommerce features`
+3. `add product listing feature`
+4. `changes for the Contact Us page`
+5. `changes for add vlaidation`
+6. `changes for add toaster`
+7. `changes for cart functionality`
+8. `changes for structure modify`
+9. `changes for the update style`
+11. `add README`
 
 

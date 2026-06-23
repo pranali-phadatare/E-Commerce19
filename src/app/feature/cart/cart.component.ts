@@ -49,7 +49,7 @@ export class CartComponent {
   remove(productId: number, productName: string): void {
     this.cartService.removeFromCart(productId);
     this.snackBar.open(`Removed ${productName} from cart`, 'Dismiss', { duration: 3000 });
-    this.toastService.success(`Removed  ${productName}from cart`);
+    this.toastService.success(`Removed ${productName}from cart`);
   }
 
   clearCart(): void {
